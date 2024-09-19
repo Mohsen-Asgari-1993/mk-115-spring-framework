@@ -6,11 +6,15 @@ import org.springframework.stereotype.Component;
 @Component
 public class FirstService {
 
-    @Autowired
     private SecondService secondService;
 
     public FirstService() {
         System.out.println("in FirstService Constructor");
+    }
+
+    @Autowired
+    public void setSecondService(SecondService secondService) {
+        this.secondService = secondService;
     }
 
     public void afterInit() {
