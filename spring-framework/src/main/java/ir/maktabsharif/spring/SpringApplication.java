@@ -1,7 +1,6 @@
 package ir.maktabsharif.spring;
 
-import ir.maktabsharif.spring.service.FirstService;
-import ir.maktabsharif.spring.service.ThirdService;
+import ir.maktabsharif.spring.service.ProductService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -12,11 +11,8 @@ public class SpringApplication {
                 "ir.maktabsharif.spring"
         );
 
-        FirstService firstService = (FirstService) applicationContext.getBean("firstService");
-        firstService.afterInit();
+        ProductService firstService = applicationContext.getBean(ProductService.class);
         firstService.printSecondService();
-
-        applicationContext.getBean(ThirdService.class).print();
     }
 
 }
