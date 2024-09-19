@@ -1,5 +1,8 @@
 package ir.maktabsharif.spring.service;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class SecondService {
 
     public SecondService() {

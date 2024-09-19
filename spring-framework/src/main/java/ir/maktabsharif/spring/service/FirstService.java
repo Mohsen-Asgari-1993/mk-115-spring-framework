@@ -1,10 +1,11 @@
 package ir.maktabsharif.spring.service;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class FirstService {
 
-    private String name;
-
-    private SecondService secondService;
+    private final SecondService secondService;
 
     public FirstService(SecondService service) {
         this.secondService = service;
@@ -15,15 +16,7 @@ public class FirstService {
         System.out.println("firstService after init");
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public SecondService getSecondService() {
-        return secondService;
+    public void printSecondService() {
+        secondService.print();
     }
 }
