@@ -1,14 +1,15 @@
 package ir.maktabsharif.spring.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
 public class FirstService {
 
-    private final SecondService secondService;
+    @Autowired
+    private SecondService secondService;
 
-    public FirstService(SecondService service) {
-        this.secondService = service;
+    public FirstService() {
         System.out.println("in FirstService Constructor");
     }
 
