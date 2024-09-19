@@ -1,5 +1,6 @@
 package ir.maktabsharif.spring.config;
 
+import ir.maktabsharif.spring.service.FirstService;
 import ir.maktabsharif.spring.service.ThirdService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -12,7 +13,7 @@ public class BeanConfig {
     }
 
     @Bean
-    public ThirdService thirdService() {
-        return new ThirdService();
+    public ThirdService thirdService(FirstService firstService) {
+        return new ThirdService(firstService);
     }
 }
