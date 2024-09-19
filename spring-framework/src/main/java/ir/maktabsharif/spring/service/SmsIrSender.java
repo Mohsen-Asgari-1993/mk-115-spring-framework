@@ -1,8 +1,8 @@
 package ir.maktabsharif.spring.service;
 
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
-@Component(value = SmsIrSender.BEAN_NAME)
+@Service(value = SmsIrSender.BEAN_NAME)
 public class SmsIrSender implements SmsSender {
 
     public static final String BEAN_NAME = "SmsIrSender";
